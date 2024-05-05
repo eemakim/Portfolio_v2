@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #f0f2ef;
+    --text-main: #0f0f0f;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Urbanist", sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+h2 {
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    margin-top: 3.2rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: var(--text-main);
+}
+
+nav a:hover {
+    text-decoration: solid underline var(--text-main);
+    background-color: rgb(255, 193, 245);
+}
+
+.nav-menu.hidden {
+    position: absolute;
+    right: 0;
+    font-size: 3rem;
+}
+
+/* Burger menu with media query */
+.nav-menu.hidden {
+    display: none;
+}
+
+
+.content {
+    border: var(--text-main) solid 1px;
+    width: 90%;
+    margin: 5% auto;
+    padding: 2.5rem 4rem;
+    position: relative;
+    min-height: 100vh;
+}
+
+div a {
+    color: var(--text-main)
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .nav-container {
+        display: none;
+    }
+
+    .nav-menu.hidden {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+footer {
+    font-size: 1rem;
+    padding-left: 4rem;
+}
+
+.content.homepage {
+    display: flex;
+    flex-basis: 1em;
+}
+
+
+
+.home-pic {
+    width: 40%;
+    object-fit: cover;
+    border: black 2px solid;
+    margin: 0 1.2rem;
+}
+
+
+
+/* Bio page */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-container div {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.skills-container img {
+    width: 2rem;
+}
+
+.funfacts-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+}
+
+.funfacts-container div {
+    border: 2px solid var(--text-main);
+    padding: 2rem;
+    width: 30%;
+    font-size: 60px;
+    text-align: center;
+}
+
+.funfacts-container div:hover {}
+
+/* Projects page */
+
+.projects-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 5rem 2rem;
+}
+
+.project-card {
+    width: 30%;
+
+}
+
+.project-links {
+    display: flex;
+    font-size: small;
+}
+
+#github-link {
+    border-right: 1px solid var(--text-main);
+    padding-right: 1rem;
+}
+
+#live-link {
+    padding-left: 1rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: all 1.8s;
+}
+
+.project-card img:hover {
+    filter: brightness(50%);
+    opacity: 0.9;
+}
+
+.project-card i {
+    position: relative;
+    top: -135px;
+    left: 120px;
+    /* opacity: 0; */
+}
+
+
+
+
+.project-card a {
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+/* Connect page */
+.socials-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.socials-links a {
+    font-size: 3rem;
+    border: 2px solid var(--text-main);
+    border-radius: 5px;
+    width: 7rem;
+    padding: 1rem;
+    text-align: center;
+    transition: 1s;
+}
+
+.socials-links a:hover {
+    background-color: #03240c;
+    color: white;
+}

@@ -1,0 +1,32 @@
+{
+    "projects": [
+        {
+            "name": "Pokedex",
+            "img": "assets/pokedex.png",
+            "ghLink": "https://github.com/eemakim/Pokedex",
+            "liveLink": "https://google.com",
+            "skills": "React, JavaScript, HTML, CSS"
+        },
+        {
+            "name": "Hotel Booking API",
+            "img": "assets/hotelBookingApi.jpg",
+            "ghLink": "https://github.com/iO-Academy/24-jan-honey-badger-brigade-hotel-api",
+            "liveLink": "https://24-honeybadgerbrigade-hotel-api.dev.io-academy.uk/api/rooms",
+            "skills": "PHP, Laravel, RestAPI"
+        },
+        {
+            "name": "Blogging Site",
+            "img": "assets/bloggingSite.png",
+            "ghLink": "https://github.com/iO-Academy/24-jan-honey-badger-brigade-blogging-site",
+            "liveLink": "https://24-honeybadgerbrigade-blog.dev.io-academy.uk/",
+            "skills": "PHP, OOP"
+        },
+        {
+            "name": "Jobsearch Board",
+            "img": "assets/jobsearchSite.png",
+            "ghLink": "https://github.com/iO-Academy/24-jan-honey-badger-brigade-jobsearch",
+            "liveLink": "https://24-honeybadgerbrigade-jobsearch.dev.io-academy.uk/",
+            "skills": "Tailwind, React.js"
+        }
+    ]
+}
