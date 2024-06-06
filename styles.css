@@ -240,6 +240,7 @@ footer {
 
 .socials-links a {
     font-size: 3rem;
+    color: rgb(255, 193, 245);
     border: 2px solid var(--text-main);
     border-radius: 5px;
     width: 7rem;
@@ -249,8 +250,8 @@ footer {
 }
 
 .socials-links a:hover {
-    background-color: #03240c;
-    color: white;
+    color: #0057ae;
+    background-color: rgb(255, 193, 245);
 }
 
 @media screen and (max-width: 1104px) {
@@ -262,7 +263,6 @@ footer {
     .project-card {
         width: 40%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
