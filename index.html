@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Yeseva+One&family=Young+Serif&display=swap"
         rel="stylesheet">
-    <script defer src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -23,9 +23,18 @@
             <a href="projects.html">Projects</a>
             <a href="connect.html">Connect</a>
         </div>
-        <div class="nav-menu hidden">
+    </nav>
+
+    <nav class="mobile-nav">
+        <div class="nav-burger">
             <a href="" class="burger-icon"><i class="fa-solid fa-bars"></i></a>
-            <a href="" class="close-icon"><i class="fa-regular fa-x"></i></a>
+            <a href="" class="close-icon hidden"><i class="fa-regular fa-x"></i></a>
+        </div>
+        <div class="mobile-nav-container hidden" id="mobile-nav-menu">
+            <a href="index.html">Home</a>
+            <a href="bio.html">Bio</a>
+            <a href="projects.html">Projects</a>
+            <a href="connect.html">Connect</a>
         </div>
     </nav>
 
@@ -34,12 +43,15 @@
             <h1>Hi, I'm Emma!</h1>
             <p>I'm an aspiring full stack software developer.</p>
             <a href="bio.html">
-                <p>Welcome to my portfolio site. Click here to find out a bit more about me!</p>
+                <p>Welcome to my portfolio site! </p>
+                <p>Click here to find out a bit more about me!</p>
             </a>
         </section>
 
         <img src="assets/IMG_20230628_141654 2.JPG" class="home-pic" />
     </div>
+
+
     <footer>&copy; Emma Kim 2024 </footer>
 </body>
 

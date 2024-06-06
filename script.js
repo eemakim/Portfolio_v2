@@ -1,5 +1,5 @@
-const projectContainer = document.querySelector('.projects-container')
 
+const projectContainer = document.querySelector('.projects-container')
 const getProjects = async () => {
     const res = await fetch('projects.json')
     const data = await res.json()
@@ -27,3 +27,15 @@ getProjects().then(data => {
     `
     })
 })
+
+const burgerMenu = document.querySelector('.burger-icon')
+const closeIcon = document.querySelector('.close-icon')
+const mobileNavMenu = document.querySelector('.mobile-nav-container')
+
+burgerMenu.addEventListener('click', (event) => {
+    event.preventDefault();
+    mobileNavMenu.classList.toggle('hidden');
+    burgerMenu.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+});
+

@@ -7,6 +7,7 @@
 :root {
     --bg-main: #f0f2ef;
     --text-main: #0f0f0f;
+    --bg-navmenu: #0057ae;
 }
 
 body {
@@ -58,55 +59,69 @@ nav a:hover {
     background-color: rgb(255, 193, 245);
 }
 
-.nav-menu.hidden {
+.nav-burger {
+    display: none;
     position: absolute;
-    right: 0;
-    font-size: 3rem;
+    right: 1.2%;
+    top: 3%;
+    font-size: 2.5rem;
+    color: var(--text-main);
+    padding: 0.1rem 1rem;
+    z-index: 1;
 }
 
-/* Burger menu with media query */
-.nav-menu.hidden {
+.mobile-nav-container.hidden {
     display: none;
 }
 
+.mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-navmenu);
+    width: 100vw;
+    margin: 0;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.mobile-nav-container a {
+    font-size: 2rem;
+}
+
+.mobile-nav-container a:hover {
+    background: rgb(255, 193, 245);
+}
+
+.close-icon.hidden {
+    display: none;
+}
+
+.burger-icon.hidden {
+    display: none;
+}
 
 .content {
     border: var(--text-main) solid 1px;
     width: 90%;
     margin: 5% auto;
     padding: 2.5rem 4rem;
-    position: relative;
-    min-height: 100vh;
+}
+
+.content.homepage {
+    display: flex;
+    justify-content: space-around;
+
 }
 
 div a {
     color: var(--text-main)
 }
-
-@media screen and (max-width: 768px) {
-
-
-    .nav-container {
-        display: none;
-    }
-
-    .nav-menu.hidden {
-        display: flex;
-        justify-content: flex-end;
-    }
-}
-
-footer {
-    font-size: 1rem;
-    padding-left: 4rem;
-}
-
-.content.homepage {
-    display: flex;
-    flex-basis: 1em;
-}
-
-
 
 .home-pic {
     width: 40%;
@@ -114,6 +129,17 @@ footer {
     border: black 2px solid;
     margin: 0 1.2rem;
 }
+
+footer {
+    font-size: 1rem;
+    padding-left: 4rem;
+}
+
+
+
+
+
+
 
 
 
@@ -157,12 +183,15 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 5rem 2rem;
+    gap: 1.5rem 0;
 }
 
 .project-card {
     width: 30%;
+}
 
+.project-card h2 {
+    padding: 0;
 }
 
 .project-links {
@@ -198,9 +227,6 @@ footer {
     /* opacity: 0; */
 }
 
-
-
-
 .project-card a {
     text-decoration: none;
     color: var(--text-main);
@@ -225,4 +251,108 @@ footer {
 .socials-links a:hover {
     background-color: #03240c;
     color: white;
+}
+
+@media screen and (max-width: 1104px) {
+    .projects-container {
+        gap: 1rem 1rem;
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        font-size: 2rem;
+    }
+
+    .content.homepage {
+        padding: 1rem;
+    }
+
+    .home-pic {
+        width: 50%;
+        margin: 0;
+    }
+
+    .projects-container {
+        justify-content: flex-start;
+    }
+
+    .project-card {
+        width: 50%;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 590px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-burger {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+
+
+    .content {
+        margin-top: 5rem;
+        padding: 0;
+    }
+
+    .content.homepage {
+        flex-direction: column;
+    }
+
+    .content.homepage h1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .home-pic {
+        width: 100%;
+        margin: 0;
+        border: none;
+        padding: 1rem;
+    }
+
+    .home {
+        padding: 1rem;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-card h2 {
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .project-card i {
+        display: none;
+    }
 }
